@@ -109,7 +109,6 @@ jobs:
         fi
 
     - name: Make boot image
-      if: env.HAVE_SOURCE_BOOT_IMAGE == 'true' && env.CHECK_FILE_IS_OK == 'true'
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
         tools/unpack_bootimg.py --boot_img boot-source.img
